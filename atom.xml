@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>bingbingliang&#39;blog</title>
+  <title>bingbingliang</title>
   <icon>https://www.gravatar.com/avatar/ab04916d7ac84ac21f8313db78f7f1d7</icon>
-  <subtitle>bingbingliang</subtitle>
+  <subtitle>bingbingliang&#39;blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.liuzhixiang.cn/"/>
