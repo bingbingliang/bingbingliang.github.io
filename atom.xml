@@ -5,9 +5,9 @@
   <subtitle>bingbingliang&#39;blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.liuzhixiang.cn/"/>
+  <link href="https://bingbingliang.github.io/"/>
   <updated>2019-06-08T03:31:05.505Z</updated>
-  <id>https://blog.liuzhixiang.cn/</id>
+  <id>https://bingbingliang.github.io/</id>
   
   <author>
     <name>冰冰凉</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>PHPStorm 相关操作</title>
-    <link href="https://blog.liuzhixiang.cn//posts/13173/"/>
-    <id>https://blog.liuzhixiang.cn//posts/13173/</id>
+    <link href="https://bingbingliang.github.io//posts/13173/"/>
+    <id>https://bingbingliang.github.io//posts/13173/</id>
     <published>2019-03-24T15:03:40.937Z</published>
     <updated>2019-06-08T03:31:05.505Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="https://blog.liuzhixiang.cn/categories/PHP/"/>
+      <category term="PHP" scheme="https://bingbingliang.github.io/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="https://blog.liuzhixiang.cn/tags/PHP/"/>
+      <category term="PHP" scheme="https://bingbingliang.github.io/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>递归例子</title>
-    <link href="https://blog.liuzhixiang.cn//posts/14182/"/>
-    <id>https://blog.liuzhixiang.cn//posts/14182/</id>
+    <link href="https://bingbingliang.github.io//posts/14182/"/>
+    <id>https://bingbingliang.github.io//posts/14182/</id>
     <published>2019-03-17T16:00:00.000Z</published>
     <updated>2019-06-08T03:31:05.506Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="https://blog.liuzhixiang.cn/categories/PHP/"/>
+      <category term="PHP" scheme="https://bingbingliang.github.io/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="https://blog.liuzhixiang.cn/tags/PHP/"/>
+      <category term="PHP" scheme="https://bingbingliang.github.io/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>MySQL 数据库的常用命令</title>
-    <link href="https://blog.liuzhixiang.cn//posts/57951/"/>
-    <id>https://blog.liuzhixiang.cn//posts/57951/</id>
+    <link href="https://bingbingliang.github.io//posts/57951/"/>
+    <id>https://bingbingliang.github.io//posts/57951/</id>
     <published>2019-03-11T16:00:00.000Z</published>
     <updated>2019-06-08T03:31:05.507Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="MySql" scheme="https://blog.liuzhixiang.cn/categories/MySql/"/>
+      <category term="MySql" scheme="https://bingbingliang.github.io/categories/MySql/"/>
     
     
-      <category term="MySql" scheme="https://blog.liuzhixiang.cn/tags/MySql/"/>
+      <category term="MySql" scheme="https://bingbingliang.github.io/tags/MySql/"/>
     
   </entry>
   
   <entry>
     <title>Laravel 数据库操作的三种方式</title>
-    <link href="https://blog.liuzhixiang.cn//posts/49682/"/>
-    <id>https://blog.liuzhixiang.cn//posts/49682/</id>
+    <link href="https://bingbingliang.github.io//posts/49682/"/>
+    <id>https://bingbingliang.github.io//posts/49682/</id>
     <published>2017-12-31T16:00:00.000Z</published>
     <updated>2019-06-08T03:31:05.509Z</updated>
     
@@ -110,17 +110,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="https://blog.liuzhixiang.cn/categories/PHP/"/>
+      <category term="PHP" scheme="https://bingbingliang.github.io/categories/PHP/"/>
     
     
-      <category term="PHP" scheme="https://blog.liuzhixiang.cn/tags/PHP/"/>
+      <category term="PHP" scheme="https://bingbingliang.github.io/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>hexo 常用命令</title>
-    <link href="https://blog.liuzhixiang.cn//posts/16107/"/>
-    <id>https://blog.liuzhixiang.cn//posts/16107/</id>
+    <link href="https://bingbingliang.github.io//posts/16107/"/>
+    <id>https://bingbingliang.github.io//posts/16107/</id>
     <published>2016-08-10T16:00:00.000Z</published>
     <updated>2019-06-11T16:22:34.330Z</updated>
     
