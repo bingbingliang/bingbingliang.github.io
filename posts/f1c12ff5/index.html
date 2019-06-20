@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Comic Sans MS:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="php,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="PHP 变量1.变量的相关规则  变量以 $ 符号开头,其后是变量名称 变量名称必须以字母或者下划线开头,不能已数字开头 变量名称只能包含字母数字字符和下划线(A-z,0-9以及_) 变量名称对大小写敏感($x与$y是两个不同的变量)  注意 PHP变量对大小写敏感,PHP保留字对大小写不敏感,PHP变量时一门弱类型的语言; 2.PHP变量作用域  在PHP中,可以在脚本的任意位置对变量进行声明">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP变量说明">
+<meta property="og:url" content="https://bingbingliang.github.io/posts/f1c12ff5/index.html">
+<meta property="og:site_name" content="bingbingliang">
+<meta property="og:description" content="PHP 变量1.变量的相关规则  变量以 $ 符号开头,其后是变量名称 变量名称必须以字母或者下划线开头,不能已数字开头 变量名称只能包含字母数字字符和下划线(A-z,0-9以及_) 变量名称对大小写敏感($x与$y是两个不同的变量)  注意 PHP变量对大小写敏感,PHP保留字对大小写不敏感,PHP变量时一门弱类型的语言; 2.PHP变量作用域  在PHP中,可以在脚本的任意位置对变量进行声明">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-20T17:03:29.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP变量说明">
+<meta name="twitter:description" content="PHP 变量1.变量的相关规则  变量以 $ 符号开头,其后是变量名称 变量名称必须以字母或者下划线开头,不能已数字开头 变量名称只能包含字母数字字符和下划线(A-z,0-9以及_) 变量名称对大小写敏感($x与$y是两个不同的变量)  注意 PHP变量对大小写敏感,PHP保留字对大小写不敏感,PHP变量时一门弱类型的语言; 2.PHP变量作用域  在PHP中,可以在脚本的任意位置对变量进行声明">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"remove","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://bingbingliang.github.io/posts/f1c12ff5/">
+
+
+
+
+
+  <title>PHP变量说明 | bingbingliang</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">bingbingliang</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">bingbingliang'notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+<hr>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://bingbingliang.github.io/posts/f1c12ff5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="冰冰凉">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bingbingliang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">PHP变量说明</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-09-07T00:00:00+08:00">
+                2014-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <a id="more"></a>
+<h2 id="PHP-变量"><a href="#PHP-变量" class="headerlink" title="PHP 变量"></a><strong>PHP 变量</strong></h2><p><strong>1.变量的相关规则</strong></p>
+<ul>
+<li>变量以 <strong>$</strong> 符号开头,其后是变量名称</li>
+<li>变量名称必须以字母或者下划线开头,不能已数字开头</li>
+<li>变量名称只能包含字母数字字符和下划线(A-z,0-9以及_)</li>
+<li>变量名称对大小写敏感($x与$y是两个不同的变量)</li>
+</ul>
+<p><strong>注意</strong> PHP变量对大小写敏感,PHP保留字对大小写不敏感,PHP变量时一门弱类型的语言;</p>
+<p><strong>2.PHP变量作用域</strong></p>
+<p> 在PHP中,可以在脚本的任意位置对变量进行声明,变量的作用域指的是变量能够被引用的那部分脚本,PHP有三种不容的变量作用域:</p>
+<ul>
+<li><strong>local</strong> (局部)</li>
+<li><strong>global</strong> (全局)</li>
+<li><strong>static</strong> (静态)</li>
+</ul>
+<p><strong>注意</strong> </p>
+<ul>
+<li>默认创建的变量都是 <strong>local</strong> </li>
+<li>若是需要在函数内部访问全局的变量,则需要在函数内部声明 <strong>global</strong> 关键字,以此来使用函数外部的变量,所有的全局变量都放在 <strong>$GLOBALS[index]</strong> 数组中</li>
+<li>函数在执行完后会删除变量,若是想要不删除变量则需要定义 <strong>static</strong> 关键字</li>
+</ul>
+<p><strong>3.PHP数据类型</strong></p>
+<ul>
+<li>字符串</li>
+<li>整数</li>
+<li>浮点数</li>
+<li>逻辑</li>
+<li>数组</li>
+<li>对象</li>
+<li>NULL</li>
+</ul>
+<p><strong>3.1字符串</strong></p>
+<p>字符串是字符序列,比如”hello,world”,字符串可以是引号内的任何文本,您可以使用单引号或双引号.</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">$x = <span class="string">"hello world!"</span>;</span><br><span class="line"><span class="keyword">echo</span> $x;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line">$x = <span class="string">'hello world'</span>;</span><br><span class="line"><span class="keyword">echo</span> $x;</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<p><strong>3.2 整数</strong></p>
+<p>可以用三种格式规定整数:十进制,十六进制(前缀是0x)或八进制(前缀0)</p>
+<p>例如下(PHP中用 <strong>var_dump()</strong> 返回变量的数据类型和值)</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">$x = <span class="number">1234</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line"></span><br><span class="line">$x = <span class="number">-1234</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line"></span><br><span class="line">$x = <span class="number">0x1234c</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line"></span><br><span class="line">$x = <span class="number">01234</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"br"</span>;</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<p><strong>3.3 浮点数</strong></p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">$x = <span class="number">10.123</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line"></span><br><span class="line">$x = <span class="number">2.4e3</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line"></span><br><span class="line">$x = <span class="number">8E-5</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"<br>"</span>;</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<p><strong>3.4 逻辑符</strong></p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">$x = <span class="keyword">true</span>;</span><br><span class="line">$y = <span class="keyword">false</span>;</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<p><strong>3.4 PHP 数组</strong></p>
+<p>实例:</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">$car = <span class="keyword">array</span>(<span class="string">"liujian"</span> , <span class="string">"shi"</span>,<span class="string">"shabi"</span>);</span><br><span class="line">var_dump($car);</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<p><strong>3.5PHP对象</strong></p>
+<p>对象是存储数据和数据处理的方法,类比其他语言的类.</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span></span></span><br><span class="line"><span class="class"></span>{</span><br><span class="line">	<span class="keyword">var</span> $color;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">car</span><span class="params">($color = <span class="string">"green"</span>)</span></span>{</span><br><span class="line">		<span class="keyword">$this</span>->color = $color;</span><br><span class="line">	}</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">what_color</span><span class="params">()</span></span>{</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">$this</span>->color;</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<p><strong>3.6 NULL值</strong></p>
+<p>用于初始化或者清空变量</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">$x = <span class="string">"hello world"</span>;</span><br><span class="line">$x = <span class="keyword">null</span>;</span><br><span class="line">var_dump($x);</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<h2 id="PHP-常量"><a href="#PHP-常量" class="headerlink" title="PHP 常量"></a>PHP 常量</h2><p>与变量不同,常量贯穿整个脚本时自动全局的,定义常量的方法如下:</p>
+<p><strong><em>define()</em></strong></p>
+<ul>
+<li>1.首个参数定义常量的名称</li>
+<li>2.第二个参数定义常量的值</li>
+<li>3.可选的第三个参数规定常量名是否对大小写敏感,默认时false</li>
+</ul>
+<p>实例:</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><?php</span></span><br><span class="line">drfine(<span class="string">"test"</span>,<span class="string">"IamTestData"</span>,<span class="keyword">true</span>);</span><br><span class="line"><span class="keyword">echo</span> test;</span><br><span class="line"><span class="meta">?></span></span><br></span></pre></td></tr></tbody></table></figure>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    冰冰凉
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://bingbingliang.github.io/posts/f1c12ff5/" title="PHP变量说明">https://bingbingliang.github.io/posts/f1c12ff5/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/a1857940/" rel="next" title="Mysql数据库处理">
+                <i class="fa fa-chevron-left"></i> Mysql数据库处理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/posts/5b7d88b3/" rel="prev" title="PHP异常处理">
+                PHP异常处理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冰冰凉</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
