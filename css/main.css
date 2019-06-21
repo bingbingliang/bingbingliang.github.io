@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #95cca6;
+  background: #344eff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2688,7 +2688,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("/images/timg.gif");
+  background: url("/images/background1.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
