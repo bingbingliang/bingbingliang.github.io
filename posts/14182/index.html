@@ -111,18 +111,18 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819// 调用递归方法public function sel(){	$arr = $this-&amp;gt;Table(&apos;region&apos;)-&amp;gt;select();	return $this-&amp;gt;level_sel($arr,$parent_id=0,$level=0);}// 递归function level_sel($arr,$parent_id=0,$le">
+<meta name="description" content="第一种：index.php 12345678910111213141516171819202122232425262728293031323334&amp;lt;php	header(&quot;Content-type: text/html; charset=utf-8&quot;);  		/** 	 * 无限极分类 	 */  	$array = array(  		1 =&amp;gt; array(&quot;id&quot; =&amp;gt; 1, &quot;nam">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="递归方法">
+<meta property="og:title" content="递归实现无限极分类">
 <meta property="og:url" content="https://bingbingliang.github.io/posts/14182/index.html">
 <meta property="og:site_name" content="bingbingliang">
-<meta property="og:description" content="12345678910111213141516171819// 调用递归方法public function sel(){	$arr = $this-&amp;gt;Table(&apos;region&apos;)-&amp;gt;select();	return $this-&amp;gt;level_sel($arr,$parent_id=0,$level=0);}// 递归function level_sel($arr,$parent_id=0,$le">
+<meta property="og:description" content="第一种：index.php 12345678910111213141516171819202122232425262728293031323334&amp;lt;php	header(&quot;Content-type: text/html; charset=utf-8&quot;);  		/** 	 * 无限极分类 	 */  	$array = array(  		1 =&amp;gt; array(&quot;id&quot; =&amp;gt; 1, &quot;nam">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-20T16:43:30.849Z">
+<meta property="og:updated_time" content="2019-06-23T06:11:39.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="递归方法">
-<meta name="twitter:description" content="12345678910111213141516171819// 调用递归方法public function sel(){	$arr = $this-&amp;gt;Table(&apos;region&apos;)-&amp;gt;select();	return $this-&amp;gt;level_sel($arr,$parent_id=0,$level=0);}// 递归function level_sel($arr,$parent_id=0,$le">
+<meta name="twitter:title" content="递归实现无限极分类">
+<meta name="twitter:description" content="第一种：index.php 12345678910111213141516171819202122232425262728293031323334&amp;lt;php	header(&quot;Content-type: text/html; charset=utf-8&quot;);  		/** 	 * 无限极分类 	 */  	$array = array(  		1 =&amp;gt; array(&quot;id&quot; =&amp;gt; 1, &quot;nam">
 
 
 
@@ -158,7 +158,7 @@
 
 
 
-  <title>递归方法 | bingbingliang</title>
+  <title>递归实现无限极分类 | bingbingliang</title>
   
 
 
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">递归方法</h1>
+          <h1 class="post-title" itemprop="name headline">递归实现无限极分类</h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-05T00:00:00+08:00">
-                2019-01-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-22T00:00:00+08:00">
+                2019-06-22
               </time>
             
 
@@ -383,7 +383,12 @@
       
 
       
-        <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 调用递归方法</span><br><span class="line">public <span class="keyword">function</span> <span class="function"><span class="title">sel</span></span>(){</span><br><span class="line">	<span class="variable">$arr</span> = <span class="variable">$this</span>->Table(<span class="string">'region'</span>)->select();</span><br><span class="line">	<span class="built_in">return</span> <span class="variable">$this</span>->level_sel(<span class="variable">$arr</span>,<span class="variable">$parent_id</span>=0,<span class="variable">$level</span>=0);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// 递归</span><br><span class="line"><span class="keyword">function</span> level_sel(<span class="variable">$arr</span>,<span class="variable">$parent_id</span>=0,<span class="variable">$level</span>=0){</span><br><span class="line">	// 定义一个静态数组</span><br><span class="line">	static <span class="variable">$data</span> = array();</span><br><span class="line">	foreach(<span class="variable">$arr</span> as <span class="variable">$key</span>=><span class="variable">$val</span>){</span><br><span class="line">		<span class="keyword">if</span>(<span class="variable">$val</span>[<span class="string">'parent_id'</span>] == <span class="variable">$parent_id</span>){</span><br><span class="line">			<span class="variable">$val</span>[<span class="string">'level'</span>] == <span class="variable">$level</span>;</span><br><span class="line">			<span class="variable">$data</span>[] = <span class="variable">$val</span>;</span><br><span class="line">			<span class="variable">$this</span>->level_sel(<span class="variable">$arr</span>,<span class="variable">$val</span>[<span class="string">'r_id'</span>],<span class="variable">$level</span>+1);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">return</span> <span class="variable">$data</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><script>
+        <h3 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h3><p>index.php</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;php</span><br><span class="line">	header("Content-type: text/html; charset=utf-8");  </span><br><span class="line">	</span><br><span class="line">	/** </span><br><span class="line">	 * 无限极分类 </span><br><span class="line">	 */  </span><br><span class="line">	$array = array(  </span><br><span class="line">		1 => array("id" => 1, "name" => "食物", "pid" => 0),  </span><br><span class="line">		2 => array("id" => 2, "name" => "衣服", "pid" => 0),  </span><br><span class="line">		3 => array("id" => 3, "name" => "水果", "pid" => 1),  </span><br><span class="line">		4 => array("id" => 4, "name" => "蔬菜", "pid" => 1),  </span><br><span class="line">		5 => array("id" => 5, "name" => "男装", "pid" => 2),  </span><br><span class="line">		6 => array("id" => 6, "name" => "女装", "pid" => 2),  </span><br><span class="line">		7 => array("id" => 7, "name" => "苹果", "pid" => 3),  </span><br><span class="line">		8 => array("id" => 8, "name" => "葡萄", "pid" => 3),  </span><br><span class="line">		9 => array("id" => 9, "name" => "番茄", "pid" => 4),  </span><br><span class="line">		10 => array("id" => 10, "name" => "土豆", "pid" => 4),  </span><br><span class="line">		11 => array("id" => 11, "name" => "T恤", "pid" => 5),  </span><br><span class="line">		12 => array("id" => 12, "name" => "衬衫", "pid" => 5),  </span><br><span class="line">		13 => array("id" => 13, "name" => "连衣裙", "pid" => 6),  </span><br><span class="line">		14 => array("id" => 14, "name" => "短裤", "pid" => 6),  </span><br><span class="line">	);  </span><br><span class="line">      </span><br><span class="line">    // 递归实现  </span><br><span class="line">	function getList ($array, $pid, $tmp = "")  </span><br><span class="line">	{  </span><br><span class="line">		for ($i = 1; $i <= count($array); $i++) { < span><br><span class="line">			if ($array[$i]['pid'] == $pid) {  </span><br><span class="line">				echo $tmp . $array[$i]['name'] . "&lt;br/&gt;";  </span><br><span class="line">				getList($array, $array[$i]['id'], $tmp . "-----");  </span><br><span class="line">			}  </span><br><span class="line">		}  </span><br><span class="line">	}  </span><br><span class="line">	getList($array, 0);</span><br></=></span></pre></td></tr></tbody></table></figure>
+<p>直接访问index.php</p>
+<hr>
+
+<h3 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 调用递归方法</span><br><span class="line">public <span class="keyword">function</span> <span class="function"><span class="title">sel</span></span>(){</span><br><span class="line">	<span class="variable">$arr</span> = <span class="variable">$this</span>->Table(<span class="string">'region'</span>)->select();</span><br><span class="line">	<span class="built_in">return</span> <span class="variable">$this</span>->level_sel(<span class="variable">$arr</span>,<span class="variable">$parent_id</span>=0,<span class="variable">$level</span>=0);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// 递归</span><br><span class="line"><span class="keyword">function</span> level_sel(<span class="variable">$arr</span>,<span class="variable">$parent_id</span>=0,<span class="variable">$level</span>=0){</span><br><span class="line">	// 定义一个静态数组</span><br><span class="line">	static <span class="variable">$data</span> = array();</span><br><span class="line">	foreach(<span class="variable">$arr</span> as <span class="variable">$key</span>=><span class="variable">$val</span>){</span><br><span class="line">		<span class="keyword">if</span>(<span class="variable">$val</span>[<span class="string">'parent_id'</span>] == <span class="variable">$parent_id</span>){</span><br><span class="line">			<span class="variable">$val</span>[<span class="string">'level'</span>] == <span class="variable">$level</span>;</span><br><span class="line">			<span class="variable">$data</span>[] = <span class="variable">$val</span>;</span><br><span class="line">			<span class="variable">$this</span>->level_sel(<span class="variable">$arr</span>,<span class="variable">$val</span>[<span class="string">'r_id'</span>],<span class="variable">$level</span>+1);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">return</span> <span class="variable">$data</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -421,7 +426,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://bingbingliang.github.io/posts/14182/" title="递归方法">https://bingbingliang.github.io/posts/14182/</a>
+    <a href="https://bingbingliang.github.io/posts/14182/" title="递归实现无限极分类">https://bingbingliang.github.io/posts/14182/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -449,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/posts/13173/" rel="next" title="PHPStorm 相关操作">
-                <i class="fa fa-chevron-left"></i> PHPStorm 相关操作
+              <a href="/posts/ac09b59e/" rel="next" title="PHP上传大文件 - 配置upload_max_filesize和post_max_size">
+                <i class="fa fa-chevron-left"></i> PHP上传大文件 - 配置upload_max_filesize和post_max_size
               </a>
             
           </div>
@@ -459,8 +464,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/posts/20764040/" rel="prev" title="oAuth2.0 协议 — PHP第三方登录">
-                oAuth2.0 协议 — PHP第三方登录 <i class="fa fa-chevron-right"></i>
+              <a href="/posts/2f14e44/" rel="prev" title="PHP超全局变量">
+                PHP超全局变量 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -501,7 +506,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2014-8-11 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
